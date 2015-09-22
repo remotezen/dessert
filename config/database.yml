@@ -1,0 +1,24 @@
+development:
+  adapter: mysql2
+  database: realrails_development
+  pool: 20
+  encoding: utf8
+  username: root
+  password: duH21Fre
+  host:  localhost
+test:
+  adapter: mysql2
+  database: realrails_test
+  pool: 20
+  encoding: utf8
+  username: root
+  password: duH21Fre
+  host:  localhost
+production:
+  adapter: mysql2
+  database: realrails
+  pool: 20
+  encoding: utf8
+  username: root
+  password: duH21Fre
+  host:  localhost      
