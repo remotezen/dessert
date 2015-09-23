@@ -1,5 +1,29 @@
+$theme-base:#CD0067;
+$theme-gray:#666;
+$theme-dark:#34001A;
+$theme-accent:#FF66B3;
+$theme-primary-btn:#0066CD;
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-hover-color: #111;
+$navbar-inverse-border-color: $theme-base;
+$dropdown-bg:$theme-gray;
+$btn-primary-bg:$theme-primary-btn;
+$navbar-inverse-bg:$theme-accent;
+.nav{padding-right:2em;}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.svg-class {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 
 @mixin box_sizing {
@@ -19,7 +43,8 @@
   margin-top:45px;
   @include box_sizing;
 }
-body{ padding-top: 60px; }
+body{  }
+
 section{ overflow: auto; }
 textarea{ resize: vertical; }
 .center{ text-align: center; }

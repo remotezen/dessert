@@ -9,11 +9,22 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+					<div class="container">
+									<div class="row">
+													<div class="col-xs-6 col-xs-offset-3 img-responsive">
+														<%=image_tag "haveyourdessert.svg" , class: "svg-class"%>					
+													</div>
+									</div>
+					</div>
       <div class="container">
-        <%= render partial: 'layouts/menu' %>
+				<div class="row">
+					<div class="col-sm-12">
+    				<header class="navbar navbar-inverse">
+        			<%= render partial: 'layouts/menu' %>
+    				</header>
+				<div>
+				</div>
       </div>
-    </header>
     <div class="container">
       <% flash.each do |message_type, message| %>
         <%=content_tag(:div, message, 
