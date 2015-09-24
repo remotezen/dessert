@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   gravtastic
   attr_accessor :remember_token, :activation_token, :reset_token
   #################Microposts
-#  has_many :microposts, dependent: :destroy
+  has_many :posts, dependent: :destroy
   ##############################RELATIONSHIPS
 
  # has_many :active_relationships,class_name: "Relationship" ,

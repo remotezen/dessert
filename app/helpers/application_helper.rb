@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(title = '')
-    filler = "Real Rails Application"
+    filler = Settings.application.title
     bar =" | "
     if title.empty?
        filler

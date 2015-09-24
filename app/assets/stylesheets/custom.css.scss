@@ -23,6 +23,73 @@ $navbar-inverse-bg:$theme-accent;
 }
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@font-face{
+  font-family: changa;
+  src: url('/assets/changa-italic.ttf');
+}
+
+@font-face{
+  font-family: myriadpro;
+    src: url('/assets/myriad.otf');   
+
+}
+.post-title{
+  font-family: impact;
+  padding-bottom:.1em;
+  text-transform:lowercase;
+  font-style:bold;
+  font-size:2em;
+  line-height:1.2em;
+
+}
+.post-title >p:first-letter{
+  text-transform:uppercase;
+  font-family:arial;
+}
+
+.post-content-holder {
+ -khtml-opacity:.50; 
+ -moz-opacity:.50; 
+ -ms-filter:”alpha(opacity=50)”;
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50; 
+   background-color: $theme-accent;
+}
+.post-content {
+  margin-top:2em;
+  padding:1em;
+  font-family: myriadpro;
+  color: $theme-dark;
+  text-align: center;
+  font-size:1.4em;
+  line-height:1.3em;
+   border: 1px solid $theme-accent;
+   opacity: .7;
+  border-top-width: 2.5em;
+  padding-top:2em;
+}
+.post-content > p{
+   letter-spacing:.04cm;
+   display:block-inline;
+}
+
+.post-content > p:first-letter{
+
+  color:$theme-accent;
+  font-size:2em;
+}
+/*
+            MYRIADPRO-REGULAR.OTF   
+  inflating: MYRIADPRO-COND.OTF      
+  inflating: MYRIADPRO-SEMIBOLDIT.OTF  
+  inflating: MYRIADPRO-SEMIBOLD.OTF  
+  inflating: MYRIADPRO-CONDIT.OTF    
+  inflating: MYRIADPRO-BOLDIT.OTF    
+  inflating: MYRIADPRO-BOLDCONDIT.OTF  
+  inflating: MYRIADPRO-BOLDCOND.OTF  
+  inflating: MYRIADPRO-BOLD.OTF      
+  */
 
 
 

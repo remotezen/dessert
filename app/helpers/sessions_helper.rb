@@ -43,6 +43,13 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
+	
+	def is_admin?
+	  current_user.admin == true				
+	end
+	def is_admin
+		redirect_to root_url unless is_admin?
+	end
   
   def log_out
     forget(current_user)

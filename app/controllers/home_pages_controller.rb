@@ -1,5 +1,5 @@
 class HomePagesController < ApplicationController
-  def index
-	  
-  end
+	def index
+		@post = Post.first					
+	end
 end

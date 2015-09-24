@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  root                'static_pages#home'
+  get 'posts/index'
+
+  get 'posts/show'
+
+  get 'posts/edit'
+
+  get 'posts/update'
+
+  get 'posts/delete'
+	root 'home_pages#index'
+
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
   get    'contact' => 'static_pages#contact'
@@ -7,6 +17,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+	resources :posts
   resources :users do
     member do
       get :following, :followers
