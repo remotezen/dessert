@@ -1,15 +1,20 @@
+
 <li id="post-<%= post.id %>">
-  <%= link_to image_tag post.user.gravatar_url %>
+<%= link_to image_tag post.user.gravatar_url({size:30}) %>
   <span class="user"><%= link_to post.user.name, post.user %></span>
+  <span><%=post.title.truncate_words(3)%></span>
+  <br>
   <span class="content">
-    <%= post.content %>
-    <%= image_tag post.picture.url if post.picture? %>
+    <%= post.content.truncate_words(4) %>
+    <%= fooimage post.picture.url,"tiny" if post.picture? %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
+    <br>
     <% if current_user?(post.user) %>
       <%= link_to "Delete", post, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
-    | <%=link_to "Update", edit_post_path(post.id) %>
+    | <%=link_to "Update", edit_post_path(post) %> 
+  | <%=link_to "show",post, method: :get%>
   </span>

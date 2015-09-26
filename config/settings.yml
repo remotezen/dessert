@@ -1,4 +1,14 @@
 application:
-  title: "Have Your Dessert"
+  title: Have Your Dessert
 user:
-  edit: "User Edit"
+  edit:
+    idiom: edit my profile
+    cannonical: edit your profile  
+post:
+  edit:
+    idiom:  edit my post
+    cannonical: edit your post
+  show:    
+    idiom: "Post that I just clicked on"
+    cannonical: "Show Post"
+

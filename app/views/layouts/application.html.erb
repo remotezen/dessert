@@ -9,31 +9,30 @@
     <%= render 'layouts/shim' %>
   </head>
   <body>
-					<div class="container">
-									<div class="row">
-													<div class="col-xs-6 col-xs-offset-3 img-responsive">
-														<%=image_tag "haveyourdessert.svg" , class: "svg-class"%>					
-													</div>
-									</div>
-					</div>
-      <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 img-responsive">
+          <%=image_tag "haveyourdessert.svg" , class: "svg-class"%>					
+    </div>
+    </div>
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-lg-6 col-lg-offset-3">
     				<header class="navbar navbar-inverse">
         			<%= render partial: 'layouts/menu' %>
     				</header>
-				<div>
-				</div>
+            <br>
       </div>
-    <div class="container">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
       <% flash.each do |message_type, message| %>
         <%=content_tag(:div, message, 
                        class: "alert alert-#{message_type }")%>
       <%end%>
-      
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
       <%= render 'layouts/footer' %>
+    </div>
+    </div>
     </div>
   </body>
 </html>

@@ -1,11 +1,15 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-	  default_scope -> { order('created_at DESC') }
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+  default_scope -> { order('created_at DESC') }
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
   validates :content, presence: true
 	validates :title, presence:   true
   validate  :picture_size
+
+  has_many :comments, dependent: :destroy
   
   private
   
@@ -15,4 +19,5 @@ class Post < ActiveRecord::Base
         errors.add(:picture, "should be less than 5MB")
       end
 		end
+  
 end

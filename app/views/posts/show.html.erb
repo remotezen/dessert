@@ -1,3 +1,15 @@
-<%=image_tag @post.picture%>
-<%=@post.title%>
+<%provide :title, Settings.post.show.canonical%>
+<!-- partial for identifying view-->
+<%=render partial: 'shared/general_heading', locals:{ title: Settings.post.show.idiom}%>
+<div class="image-container">
+  <%=fooimage @post.picture, "large" unless @post.picture.nil?%>
+</div>
+<div class="post-title">
+  <p>
+    <%=@post.title%>
+  </p>
+</span>
+</div>
+<p class="post-content">
 <%=@post.content%>
+</p>

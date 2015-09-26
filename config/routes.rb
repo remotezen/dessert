@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  get 'posts/index'
 
-  get 'posts/show'
 
-  get 'posts/edit'
+  get 'comments/new'
 
-  get 'posts/update'
+  get 'comments/edit'
 
-  get 'posts/delete'
+  get 'comments/update'
+
+  get 'comments/show'
+
+  get 'comments/destroy'
+
+  get 'comments/index'
+
 	root 'home_pages#index'
 
   get    'help'    => 'static_pages#help'
@@ -18,6 +23,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 	resources :posts
+  resources :comments
   resources :users do
     member do
       get :following, :followers

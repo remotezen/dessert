@@ -1,5 +1,7 @@
 <%unless @posts.nil?%>
-  <%=render @posts%>
+  <ul class="posts">
+    <%=render @posts%>
+  </ul>
 <%else%>
   <h1>
     there are no posts

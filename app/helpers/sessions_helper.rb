@@ -47,6 +47,9 @@ module SessionsHelper
 	def is_admin?
 	  current_user.admin == true				
 	end
+  def is_admin(user)
+    user.admin == true
+  end
 	def is_admin
 		redirect_to root_url unless is_admin?
 	end

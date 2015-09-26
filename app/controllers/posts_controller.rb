@@ -19,8 +19,8 @@ class PostsController < ApplicationController
 	end
 
   def show
-	  @post = Post.first				
-  end
+    @post = Post.friendly.find(params[:id])
+    end
 
   def edit
     @post = Post.find(params[:id])

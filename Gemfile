@@ -4,7 +4,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+gem 'simple_form'
+#rails generate simple_form:install --bootstrap
+gem 'friendly_id'
+#for above
+#rails g friendly_id
 gem 'bootstrap_form'
+gem 'i18n-recursive-lookup'
 gem 'config'
 #rails g config:install
 gem 'inline_svg'

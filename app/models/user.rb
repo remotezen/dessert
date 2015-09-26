@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
   #################Microposts
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
   ##############################RELATIONSHIPS
 
  # has_many :active_relationships,class_name: "Relationship" ,
